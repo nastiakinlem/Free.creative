@@ -7,22 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style_sec.scss">
     <link rel="stylesheet" href="css/style_sec.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Document</title>
 
 
 
 </head>
 <body>
+<div class="d-block d-lg-none">
+<div class="overlay-navigation">
+    <nav role="navigation">
+        <ul>
+            <li><a href="#" data-content="The beginning">Home</a></li>
+            <li><a href="#" data-content="Curious?">About</a></li>
+            <li><a href="#" data-content="I got game">FB</a></li>
+            <li><a href="#" data-content="Only the finest">Insta</a></li>
+            <li><a href="#" data-content="Don't hesitate">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<section class="home">
+    <div class="open-overlay">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+    </div>
+</section>
+</div>
 
 <header class="position-absolute w-100">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light align-items-center">
+            <div class="d-flex">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.svg" alt="logo">
             </a>
             <p class="mb-0">
                 Разрабатываем фирменные <br> стили с 2009 года
             </p>
+            </div>
 
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -48,45 +73,51 @@
     <div class="description">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-12">
+                <div class="col-lg-12 col-md-10 col-10">
                     <h1>
                         Вам нужен фирменный стиль или ребрендинг?
                     </h1>
                     <p>Разработаем в срок от 10-ти дней</p>
-                    <a href="#" class="btn btn-light">Портфолио </a>
-                    <a href="#" class="btn btn-light">Оставить заявку</a>
+                    <div class="d-flex links_top">
+                    <a href="#" class="btn btn-light order-sm-2">Портфолио </a>
+                    <a href="#" class="btn btn-light order-lg-2 order-md-2 order-sm-1">Оставить заявку</a>
                 </div>
-
+                </div>
             </div>
-
         </div>
     </div>
+    <div class="banner d-none d-lg-block">
     <div class="owl-carousel">
-        <div class="banner"></div>
+        <div class="banner item_1"></div>
         <div class="banner item_2"></div>
         <div class="banner item_3"></div>
         <div class="banner item_4"></div>
-
+        </div>
     </div>
+    <div class=" d-block d-lg-none item_5"> </div>
+
 </section>
 
-<section>
-    <div class="container section_first">
+<section class="container">
+    <div class="section_first">
         <h3>
             Что такое фирменный стиль
         </h3>
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-7 col-12">
-                <img src="/images/green_banki.png" class="d-block w-100 mr-30" alt="banki">
+                <img src="images/green_banki.png" class="d-block w-100 mr-30" alt="banki">
             </div>
-            <div class="col-lg-5 col-md-7 col-8">
+            <div class="col-lg-5 col-md-8 col-11">
                 <div>
                     <p> Это набор тех уникальных «признаков», по которым клиент отличит вас от других компаний. Фирменный стиль отражает миссию бренда, ценности, является способом его идентификации, формирует определённое восприятие в коммуникации с потребителями.</p>
                     <p>
                         В идеале разработка корпоративного стиля должна происходить одновременно с созданием бизнеса и формированием его фундаментальных идей. Есть и второй вариант: бизнес существует определенное время и ему нужен перезапуск - это называется редизайн или ребрендинг: в мире жёсткой конкуренции важно быть «в тренде», успевать за изменениями в поведениях покупателя и “говорить” с ним на одном языке.</p>
                 </div>
             </div>
+            </div>
         </div>
+  </section>
+<section class="container">
         <div class="row section_name_of_logo">
             <div class="col-lg-12 col-md-9 col-10">
                 <h3> Название и логотип – важные составляющие фирменного стиля, но на этом всё только начинается. Ниже основные элементы:</h3>
@@ -101,10 +132,10 @@
                 <span class="figures_top">3</span> <p class="text_top">Фирменные цвета всей коммуникации (онлайн и оффлайн)</p>
             </div>
             <div class="col-lg-2 col-md-4 col-7 d-flex">
-                <p class="text_top"><span class="figures_top">4</span>Шрифт</p>
+                <p class="text_top text_top_exception"><span class="figures_top ">4</span>Шрифт</p>
 
             </div>
-            <div class="col-lg-4 col-md-6 col-9 ">
+            <div class="col-lg-4 col-md-5 col-9 ">
                 <div class="d-flex">
                     <span class="figures_top">5</span>
                     <div>
@@ -115,10 +146,10 @@
                 </div>
             </div>
         </div>
-
-        <div class="row section_aqua">
-            <h3 class="col-lg-12 col-md-7 col-8">Сколько стоит фирменный стиль?</h3>
-            <div class="col-lg-5 col-md-8 col-8">
+</section>
+<section class="container">
+        <div class="row section_aqua align-items-end">
+            <div class="col-lg-5 col-md-9 col-12 order-lg-1 order-md-2 order-sm-2 order-1">
                 <p>Каждая задача по разработке фирменного стиля уникальна для нас — это новый вызов и новые эмоции. Мы принципиально не предлагаем вам стандартизированные пакеты “эконом”, “стандрат”, или “премиум”, мы не штампуем, мы - создаем.
                 </p>
                 <p>
@@ -126,29 +157,31 @@
                 <p>
                     Каждый клиент нашего агентства получает приятный бонус на финише проекта, о котором мы расскажем ниже ▼</p>
             </div>
-            <div class="col-lg-7 col-md-7 col-10">
-                <img src="/images/aqua.png" class="d-block w-100" alt="aqua">
+            <div class="col-lg-7 col-md-12 col-12 order-lg-2 order-md-1 order-sm-1">
+                <h3 >Сколько стоит фирменный стиль?</h3>
+                <img src="images/aqua.png" class="d-block w-100" alt="aqua">
             </div>
-
-        </div>
     </div>
 </section>
 
 <section class="container main_pictures_section">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
-            <img src="/images/amperia.svg" alt="kol">
-        </div>
-        <div class="col-lg-4 col-md-5 col-5">
-            <h4>Amperia </h4>
+            <img src="images/amperia.svg" alt="kol">
         </div>
         <div class="col-lg-4 col-md-6 col-6">
+            <h4>Amperia </h4>
+        </div>
+        <div class="col-lg-4 col-md-6 col-6 d-none d-sm-block">
             <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-4">
+        <div class="col-lg-4 col-md-6 col-10">
             <p> Бренд красивых сувениров и подарков для дома </p>
+        </div>
+        <div class=" col-md-12 col-12 d-block d-sm-none">
+            <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
 </section>
@@ -156,73 +189,85 @@
 <section class="container main_pictures_section">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
-            <img src="/images/aqua.png" alt="kol">
+            <img src="images/aqua.png" alt="kol">
         </div>
         <div class="col-lg-4 col-md-6 col-6">
             <h4>AQ.Lifecare</h4>
         </div>
-        <div class="col-lg-4 col-md-6 col-6">
+        <div class="col-lg-4 col-md-6 col-6 d-none d-sm-block">
             <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-4">
+        <div class="col-lg-4 col-md-6 col-10">
             <p> Инновационная клиника внутривенной медицины </p>
+        </div>
+        <div class=" col-md-12 col-12 d-block d-sm-none">
+            <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
 </section>
 
 <section class="container main_pictures_section">
+
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
             <img src="images/green_banki.png" alt="kol">
         </div>
-        <div class="col-lg-3 col-md-3 col-3">
+        <div class="col-lg-3 col-md-6 col-6">
             <h4>Vilata</h4>
         </div>
-        <div class="col-lg-4 col-md-6 col-6">
+        <div class="col-lg-4 col-md-6 col-6 d-none d-sm-block">
             <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-4">
+        <div class="col-lg-4 col-md-6 col-10">
             <p> Бренд натуральных и вкусных соусов </p>
         </div>
+        <div class=" col-md-12 col-12 d-block d-sm-none">
+            <a href="#" class="btn btn-light">Смотреть проект</a>
+        </div>
     </div>
+
 </section>
 
 <section class="container main_pictures_section">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
-            <img src="/images/coral_black.png" alt="kol">
+            <img src="images/coral_black.png" alt="kol">
         </div>
-        <div class="col-lg-3 col-md-3 col-3">
+        <div class="col-lg-3 col-md-6 col-6">
             <h4>Coral Black</h4>
         </div>
-        <div class="col-lg-4 col-md-6 col-6">
+        <div class="col-lg-4 col-md-6 col-6 d-none d-sm-block">
             <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-4">
-            <p> Черная икра в современной инторпритации </p>
+        <div class="col-lg-4 col-md-6 col-10">
+            <p> Черная икра в современной инторпритации</p>
+        </div>
+        <div class=" col-md-12 col-12 d-block d-sm-none">
+            <a href="#" class="btn btn-light">Смотреть проект</a>
         </div>
     </div>
 </section>
 
 <div class="container show_more_position">
-    <div class="col-lg-12 col-md-12 col-12">
+    <div class="col-lg-12 col-md-12 col-12 ">
         <a href="#" class="btn btn-light show_more">Показать еще</a>
     </div>
 </div>
 
 <section class="container guide_line">
-    <h3 class="col-lg-5 col-md-8 col-7">Гайдлайны в подарок</h3>
+    <h3 class="col-lg-5 col-md-12 col-12">Гайдлайны в подарок</h3>
     <div class="row">
         <div class="col-lg-7 col-md-7 col-12">
-            <img src="images/dislife.png" class="d-block w-100 mr-30" alt="dislife">
+            <img src="images/dislife.png" class=" w-100  mr-30  d-none d-lg-block" alt="dislife">
+            <img src="images/orange.png" class="d-block d-lg-none w-100 mr-30" alt="dislife">
         </div>
-        <div class="col-lg-5 col-md-7 col-8">
+        <div class="col-lg-5 col-md-8  col-sm-10 col-12">
             <article>
                 <h4>Что такое гайдлайн и зачем он нужен?</h4>
                 <p>А теперь об обещанном бонусе: заказывая фирменный стиль в нашем агентстве вы получаете минимальный гайдлайн в подарок, это позволит вам уже быть на шаг впереди ваших конкурентов!</p>
@@ -241,24 +286,200 @@
     </p>
     <form>
         <div class="row">
-            <div class="form-group col-lg-4 col-md-8 col-9">
+            <div class="form-group col-lg-4 col-md-7 col-12">
                 <input type="text" class="form-control in_put" placeholder="Ваше Имя">
             </div>
-            <div class="form-group col-lg-4 col-md-8 col-9">
+            <div class="form-group  col-lg-4 col-md-7 col-12">
                 <input type="tel" class="form-control in_put" placeholder="+7 (999) 999-99-99">
             </div>
-            <div class="form-group col-lg-3 col-md-4 col-6 order-lg-4 order-xl-3 order-md-4">
-                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            <div class="form-group col-lg-3 col-md-4 col-6  order-md-4">
+                <button type="submit" class="btn btn-primary d-none d-lg-block">Отправить заявку</button>
             </div>
         </div>
-        <div class="form-group form-check col-lg-5 col-md-7 col-9">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Я принимаю <a href="#">условия передачи персональных данных</a></label>
+        <div class="form-group form-check col-lg-5 col-md-12 col-12">
+            <input type="checkbox" class="form-check-input " id="exampleCheck1">
+            <label class="form-check-label accept_confirm" for="exampleCheck1">Я принимаю <a href="#">условия передачи персональных данных</a></label>
+        </div>
+        <div class="form-group col-lg-3 col-md-12 col-12 d-block d-lg-none">
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
         </div>
     </form>
 </section>
 
+
+<section class="container">
+    <div class="step_by_step">
+        <h5> Этапы создания<br>фирменного стиля <br>и гайдлайна</h5>
+        <div class="row">
+            <div class="lampa col-lg-4 col-md-12 col-12">
+                <img src="images/lampa.svg" alt="lamp">
+                <h5>Погружение<br>в креативный поиск</h5>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 first_staff_bottom">
+                <h5>Иследование среды</h5>
+                <p>Изучаем нишу и конкурентное поле, находим подходящую идею будущей коммуникации</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 first_staff_bottom">
+                <h5>Поиск<br>тональности </h5>
+                <p>Решаем, какая тональность подходит именно вашему бренду. Дерзкий характер или спокойный, строгий или ультрамодный</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 first_staff_bottom first_staff_bottom_exception">
+                <h5>Формирование мудбордов</h5>
+                <p>Составляем подборку креативных проектов, которые соответствуют
+                    поставленной тональности стиля</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="step_by_step_2">
+        <div class="row">
+            <div class="col-lg-4 col-md-10 col-12 konvert">
+                <img src="images/konvert.svg" alt="konvert">
+                <h5>Разработка визуальной<br> и вербальной айдентики</h5>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 sec_staff_bottom">
+                <h5>Название <br> и слоганы</h5>
+                <p>Придумываем название для вашего бренда <br>и запоминающиеся слоганы</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 sec_staff_bottom">
+                <h5>Разработка логотипа, цвет </h5>
+                <p>Создаем логотип – основной графический символ, важнейший элемент коммуникации, подбираем цветовую палитру для всей коммуникации</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5  sec_staff_bottom sec_staff_bottom_exception">
+                <h5>Основные носители
+                    фирменного стиля</h5>
+                <p>Создаем дополнительные элементы дизайна: иллюстрации, фото, типографика. Прорабатываем дизайн на всех носителях. </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="step_by_step_3">
+        <div class="row">
+            <div class=" col-xl-4 col-lg-4 col-md-8 col-12 book">
+                <img src="images/book.svg" alt="konvert">
+                <h5>Создание гайдлайна</h5>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 third_staff_bottom">
+                <h5>Основные принципы стиля</h5>
+                <p>Выявляем основные принципы, на которых построен фирменный стиль</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5 third_staff_bottom">
+                <h5>Составление<br>гайдлайна </h5>
+                <p>Наглядно показываем все правила использования фирменного стиля, закрепляем результат в виде презентации</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-5  third_staff_bottom third_staff_bottom_exception">
+                <p>Вы получаете готовый бренд с набором <br>всех необходимых инструментов</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="frelans d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h4>Фрилансер</h4>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h4>Free.creative</h4>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <h4>Большое агентство с именем</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <h5>Философия</h5>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Часто замотивирован как можно быстрее сделать и получить деньги.</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Опытная команда профессионалов, нацеленная на результат. К каждому проекту относимся как к родному, работаем на качество, а не на количество.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <p>
+                    Огромная сверхопытная команда экстра профессионалов, выдающая проект строго исходя из подписанной сметы и часов человека. Замотивированы делать “большие” и дорогие проекты.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <h5>Уровень дизайна</h5>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Как получится....</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Высокий. За нас говорит наше портфолио и клиенты.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <p>
+                    Высокий. За нколлег говорит их портфолио и уровень клиентов.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <h5>Стоимость</h5>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>В 90% случаев дешевле агентства.</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Адекватная рынку и вашей задаче. Каждый кейс для нас – уникальный вызов, мы погружаемся в бриф и выходим с ценовым предложением.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <p>
+                    Высокая, иногда откровенно завышенная, малобюджетные клиенты неинтересны.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <h5>Отношение<br>к клиенту</h5>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Как получится...</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Нас можно назвать настоящими друзьями. Не бросаем в беде <br>и сделаем всё, чтобы решить проблему. На связи 24/7, поддерживаем и консультируем онлайн и офлайн на каждом этапе сотрудничества.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <p>
+                    Коммуникация ведется в рамках выделенных часов и сметы, вам уделяют столько времени, сколько агентство считает нужным. Иногда можно ждать ответ на свой имейл больше дня – это норма.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-12">
+                <h5>Сроки</h5>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Иногда исполнитель вообще пропадает без связи</p>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <p>Мы адекватно подходим к срокам в нашем агентстве, не обещаем того, чего не можем выполнить. Чётко менеджерим своё время, чтобы клиент получил всё в срок.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <p>
+                    Долго, несколько уровней менеджмента, бюррократия, очередь из больших клиентов.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section class="container guarantee_section">
+    <div class="padding_style">
     <h3 class="col-lg-9 col-md-7 col-6" >Гарантия качества:<br>5 фундаментальных преимуществ
         работать с нами</h3>
     <div class="row ">
@@ -284,106 +505,96 @@
             </div>
 
         </div>
-        <div class="col-lg-2 col-md-4 col-7">
+        <div class="col-lg-2 col-md-5 col-7">
             <div class="d-flex">
-                <span class="figures_bottom">5</span><p class="text_bottom">
+                <span class="figures_bottom">5</span><p class="text_bottom text_bottom_exception">
                 Мы имеем опыт работы с малым, средним и крупным бизнесом, а также с международными корпорациями Наша репутация - это 9-ть лет успешной работы. 8-мь из 10-ти клиентов после совместной разработки фирменного стиля обращаются к нам повторно: за созданием сайта, контента для социальных сетей или по любой другой задаче.
             </p>
             </div>
         </div>
     </div>
-</section>
-
-<section class="container d-flex">
-    <div >
-
     </div>
 </section>
 
-
-
-
-
-
-
-<section style="padding-bottom: 100px">
-    <div class="container">
-        <form class="row ">
-            <div class="form-group col-md-4 order-1 order-lg-1">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group col-md-4 order-2 order-lg-2">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group form-check col-md-12 order-3 order-lg-3">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+<section class="container contact_section">
+    <div class="row">
+    <div class="Contact_us">
+<h4 class="col-lg-5 col-md-12 col-12">Связаться с нами</h4>
+        <form>
+            <div class="col-lg-12 col-md-10 col-12">
+                <div class="form-group col-lg-5 col-md-7 col-8">
+                    <input type="text" class="form-control in_put_bottom" placeholder="Ваше Имя">
+                </div>
+                <div class="form-group col-lg-5 col-md-7 col-8">
+                    <input type="tel" class="form-control in_put_bottom" placeholder="+7 (999) 999-99-99">
+                </div>
+                <div class="form-group form-check col-lg-12 col-md-12 col-9">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="check_in" for="exampleCheck1">Я принимаю <a href="#">условия передачи персональных данных</a></label>
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-12">
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </div>
             </div>
         </form>
-
+    </div>
+   <div class="Contacts">
+    <div class="col-lg-12 col-md-12 col-12">
+        <h4>Контакты</h4>
+        <p>(38) 044 596 67 52</p>
+        <p>brand@free-creative.com</p>
+        <p>Kyiv, 174 Antonovycha street</p>
+    </div>
+   </div>
     </div>
 </section>
 
 
-<section class="freelance">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-3 castom_padd">
-                <h4>Фрилансер</h4>
-            </div>
-            <div class="col-md-3">
-                <h4>Free.creative</h4>
-            </div>
-            <div class="col-md-4">
-                <h4>Большое агентство <br> с именем</h4>
+
+
+
+
+
+<section class="container SMI_section">
+    <h5>Мы в СМИ</h5>
+    <div class="row">
+        <div class="col-lg-3 col-md-5 col-sm-5 col-12">
+            <div class="add_smi">
+                <p>История агентства FREE.creative</p>
+                <a href="#">vc.ua</a>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-2">
-                <h5>Философия</h5>
-            </div>
-            <div class="col-md-3">
-                <p>Часто замотивирован как можно быстрее сделать и получить деньги.</p>
-            </div>
-            <div class="col-md-3">
-                <p>Опытная команда профессионалов, нацеленная на результат. К каждому проекту относимся как к родному, работаем на качество, а не на количество.</p>
-            </div>
-            <div class="col-md-4">
-                <p>Огромная сверхопытная команда экстра профессионалов, выдающая проект строго исходя из подписанной сметы и часов человека. Замотивированы делать “большие” и дорогие проекты.</p>
+        <div class="col-lg-3 col-md-5 col-sm-5 col-12">
+            <div class="add_smi">
+                <p>Традиции и современность: брендинг ресторана и пекарни «Ешь Хлеб»</p>
+                <a href="#">vc.ua</a>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-2">
-                <h5>Уровень<br>дизайна</h5>
+        <div class="col-lg-3 col-md-5 col-sm-5 col-12">
+            <div class="add_smi">
+                <p>Четыре боли крупных клиентов и целительная сила аккаунтинга</p>
+                <a href="#">vc.ua</a>
             </div>
-            <div class="col-md-3">
-                <p>Как получится....</p>
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-5 col-12">
+            <div class="add_smi">
+                <p>Как выводить на рынок бренды будущего: кейс инновационной клиники витаминных коктейлей</p>
+                <a href="#">vc.ua</a>
             </div>
-            <div class="col-md-3">
-                <p>Высокий. За нас говорит наше портфолио и клиенты.</p>
-            </div>
-            <div class="col-md-4">
-                <p>Высокий. За нколлег говорит их портфолио и уровень клиентов.</p>
-            </div>
-
         </div>
     </div>
 </section>
 
+    <footer class="container">
+        <h5 class="col-lg-12 col-md-12 col-12">@ FREE.creative 2008—2020</h5>
+
+</footer>
+
+<script src="js/scripts.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/owl.carousel.js"></script>

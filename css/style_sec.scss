@@ -1,19 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+
+.home {
+  position: relative;
+  background-position: center center;
+}
+
+.overlay-navigation {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  transform: translateY(-100%);
+}
+
+.overlay-slide-down {
+  transition: all .4s ease-in-out;
+  transform: translateY(0)
+}
+
+.overlay-slide-up {
+  transition: all .8s ease-in-out;
+  transform: translateY(-100%)
+}
+
+.overlay-navigation nav,
+.overlay-navigation nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay-navigation nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.overlay-navigation nav ul li {
+  @media (max-width: 5000px){
+    letter-spacing: 1px;
+  }
+  flex-basis: 20%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(-100%);
+}
+
+.overlay-navigation nav li a {
+  @media (max-width: 5000px){
+    letter-spacing: 1px;
+  }
+  position: relative;
+  top: 46%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Work sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.overlay-navigation nav li a:before {
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .2s linear;
+}
+
+.overlay-navigation nav li a:after {
+  content: attr(data-content);
+  font-size: 0.7rem;
+  transition: all .2s linear;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  text-transform: none;
+  font-family: 'Open sans', serif;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.overlay-navigation nav li a:hover:before {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.overlay-navigation nav li a:hover:after {
+  transform: translateY(15px);
+  opacity: 1;
+}
+
+.overlay-navigation nav li:nth-of-type(1){background-color: #29363B}
+.overlay-navigation nav li:nth-of-type(2){background-color: #EA495F}
+.overlay-navigation nav li:nth-of-type(3){background-color: #F4837D}
+.overlay-navigation nav li:nth-of-type(4){background-color: #FDCEA9}
+.overlay-navigation nav li:nth-of-type(5){background-color: #99B998}
+
+.slide-in-nav-item {
+  animation: slide-in-nav-item 0.4s linear 1 .2s both;
+}
+
+.slide-in-nav-item-delay-1 {
+  animation: slide-in-nav-item 0.4s linear 1 .4s both;
+}
+
+.slide-in-nav-item-delay-2 {
+  animation: slide-in-nav-item 0.4s linear 1 .6s both;
+}
+
+.slide-in-nav-item-delay-3 {
+  animation: slide-in-nav-item 0.4s linear 1 .8s both;
+}
+
+.slide-in-nav-item-delay-4 {
+  animation: slide-in-nav-item 0.4s linear 1 1s both;
+}
+
+.slide-in-nav-item-reverse {
+  animation: slide-in-nav-item-reverse .3s linear 1 .5s both;
+}
+
+.slide-in-nav-item-delay-1-reverse {
+  animation: slide-in-nav-item-reverse .3s linear 1 .4s both;
+}
+
+.slide-in-nav-item-delay-2-reverse {
+  animation: slide-in-nav-item-reverse .3s linear 1 .3s both;
+}
+
+.slide-in-nav-item-delay-3-reverse {
+  animation: slide-in-nav-item-reverse .3s linear 1 .2s both;
+}
+
+.slide-in-nav-item-delay-4-reverse {
+  animation: slide-in-nav-item-reverse .3s linear 1 both;
+}
+
+
+.open-overlay {
+  position: absolute;
+  right: 5rem;
+  top: 3.2rem;
+  z-index: 100;
+  width: 34px;
+  display: block;
+  cursor: pointer;
+}
+
+.open-overlay span {
+  display: block;
+  height: 2px;
+  background-color: black;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.animate-top-bar {
+  animation: animate-top-bar .6s linear 1 both
+}
+
+.animate-bottom-bar {
+  animation: animate-bottom-bar .6s linear 1 both
+}
+
+.animate-middle-bar {
+  animation: animate-middle-bar .6s linear 1 both
+}
+
+.animate-out-top-bar {
+  animation: animate-out-top-bar .6s linear 1 both
+}
+
+.animate-out-bottom-bar {
+  animation: animate-out-bottom-bar .6s linear 1 both
+}
+
+.animate-out-middle-bar {
+  animation: animate-out-middle-bar .6s linear 1 both
+}
+
+@keyframes slide-in-nav-item {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes slide-in-nav-item-reverse {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+  }
+}
+
+@keyframes animate-top-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px)
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #fff
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-bottom-bar {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px)
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #fff;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-middle-bar {
+  0% {
+    background-color: #fff;
+  }
+  80% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #29363B;
+  }
+}
+
+@keyframes animate-out-top-bar {
+  0% {
+    background-color: #29363B
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+    transform: translateY(9px)
+  }
+  80% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    background-color: #29363B
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-bottom-bar {
+  0% {
+    background-color: #29363B
+  }
+  50% {
+    -webkit-transform: translateY(-9px);
+    transform: translateY(-9px)
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    background-color: #29363B;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: #FFF;
+  }
+}
+
+@keyframes animate-out-middle-bar {
+  0% {
+    background-color: #29363B
+  }
+  80% {
+    background-color: #29363B;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 640px) {
+  .overlay-navigation  nav ul li a {
+    font-size: 11px;
+  }
+  .overlay-navigation  nav li a:after {
+    font-size: 0.6rem;
+  }
+  .open-overlay {
+    right: 1rem;
+  }
+  .overlay-navigation nav li a:before {
+    width: 15px;
+  }
+}
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
 @import "bootstrap.css";
 @import "style.css";
+  @font-face {
+      font-family: '20 Kopeek';
+      src: url('../fonts') format('woff2'),
+      url('../fonts') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 @font-face {
-  font-family: '20 Kopeek';
-  src: url('/fonts') format('woff2'),
-  url('/fonts') format('woff');
+  font-family: '20 Kopeek Book';
+  src: url('../fonts') format('woff2'),
+  url('../fonts') format('woff');
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
-
 $main_font:'20 Kopeek';
 $main_color:#FFFFFF;
-
 
 @mixin max-screen($res)
 {
@@ -25,12 +375,22 @@ $main_color:#FFFFFF;
 
 .container{
   max-width: 1110px;
+  @include max-screen(1000px){
+    padding: 15px 30px;
+  }
+  @include max-screen(321px){
+    padding: 5px 10px;
+  }
 }
 header{
   z-index: 2;
   padding-top: 32px;
+
   p{
-    font-family: $main_font;
+    @include max-screen(440px){
+      max-width: 120px;
+    }
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -46,7 +406,7 @@ header{
   padding: 0 27px;
   border: 1px solid $main_color;
   border-radius: 15px;
-  font-family: $main_font;
+  font-family: '20 Kopeek';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -70,6 +430,12 @@ header{
   max-width: 600px;
 }
 .description{
+  @include max-screen(930px){
+    padding-top: 50px;
+  }
+  @include max-screen(770px){
+    padding-top: 233px;
+  }
   width: 100%;
   position: absolute;
   height: 100vh;
@@ -78,7 +444,14 @@ header{
   align-items: center;
   justify-content: flex-start;
   h1 {
-    font-family: '20 Kopeek Book', sans-serif;
+    @include max-screen(770px){
+      color:#FFFFFF;
+      font-size: 45px;
+    }
+    @include max-screen(400px){
+      font-size: 30px;
+    }
+    font-family: '20 Kopeek Book';
     font-size: 55px;
     line-height: 100%;
     color: #181818;
@@ -86,32 +459,60 @@ header{
     padding-bottom: 30px;
   }
   p{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(770px){
+      color: #FFFFFF;
+      font-size: 26px;
+    }
+    @include max-screen(400px){
+      font-size: 20px;
+    }
+    font-family: '20 Kopeek';
     font-size: 34px;
     line-height: 110%;
     color: #181818;
     padding-bottom: 65px;
   }
+  .links_top{
+    @include max-screen(770px){
+      max-width: 200px;
+      flex-wrap: wrap;
+    }
   a{
+    @include max-screen(940px){
+      padding: 10px 25px;
+    }
+    @include max-screen(770px){
+      &:first-of-type{
+        padding: 10px 50px 10px 40px;
+      }
+      padding: 10px 25px;
+      margin-bottom: 42px;
+      font-size: 16px;
+    }
+
     &:first-of-type{
       margin-right: 20px;
     }
     background: #FFFFFF;
     border-radius: 40px;
-    font-family: '20 Kopeek',sans-serif;
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     color: #181818;
-    padding: 15px 20px;
+    padding: 15px 47px;
 
   }
+  }
 }
+
 .banner{
   height: 100vh;
   background-size: cover;
+  &.item_1{
   background-image: url("../images/nice_tone.png");
+  }
   &.item_2{
     background-image: url("../images/girl.png");
   }
@@ -122,11 +523,31 @@ header{
     background-image: url("../images/milk.png");
   }
 }
+.item_5{
+  @include max-screen(620px){
+
+  }
+  height: 150vh;
+  background-size: cover;
+  background-image: url("../images/chel_v_sinem.png");
+}
+
+
 .section_first {
   padding-top: 70px;
+  img{
+    padding-bottom: 30px;
+  }
 
   h3 {
-    font-family: '20 Kopeek Book', sans-serif;
+    @include max-screen(992px){
+      font-size: 34px;
+    }
+    @include max-screen(576px){
+      font-size: 32px;
+    }
+
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
@@ -134,7 +555,13 @@ header{
     color: #181818;
   }
   p{
-    font-family: '20 Kopeek',sans-serif;
+    @include max-screen(992px){
+      font-size: 16px;
+    }
+    @include max-screen(576px){
+      font-size: 15px;
+    }
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -147,7 +574,10 @@ header{
   padding-top: 150px;
   padding-bottom: 120px;
   h3{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(600px){
+      font-size: 35px;
+    }
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
@@ -156,53 +586,86 @@ header{
     padding-bottom: 40px;
   }
   .figures_top{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(600px){
+      font-size: 35px;
+      padding-right: 60px;
+    }
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
     line-height: 100%;
     color: #181818;
     padding-right: 8px;
-    position: relative;
-
+    padding-bottom: 90px;
   }
   .text_top{
-    font-family: '20 Kopeek',sans-serif;
+    @include max-screen(600px){
+      font-size: 15px;
+      bottom: -15px;
+      padding-bottom: 60px;
+    }
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
-    line-height: 140%;
+    font-size: 16px;
+    line-height: 130%;
     color: #181818;
     position: relative;
+    bottom: -30px;
 
+  }
+  .text_top_exception{
+    @include max-screen(770px){
+      padding-bottom: 90px;
+    }
+    bottom: 0;
   }
 }
 
 .section_aqua{
   padding-bottom: 133px;
+  img{
+    padding-bottom: 20px;
+  }
   h3{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(770px){
+      font-size: 34px;
+    }
+    @include max-screen(576px){
+      font-size: 32px;
+    }
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
     line-height: 110%;
     color: #181818;
-    text-align: end;
+
   }
   p{
+    @include max-screen(770px){
+      font-size: 16px;
+    }
+    @include max-screen(576px){
+      font-size: 15px;
+    }
+
     &:last-of-type{
       background: #2B59C3;
       border-radius: 5px;
       color: $main_color;
       padding: 13px 11px;
     }
-    font-family: '20 Kopeek',sans-serif;
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 140%;
     color: #181818;
     padding-right: 80px;
+
+
   }
 }
 .main_pictures_section{
@@ -215,16 +678,32 @@ header{
     align-items: center;
   }
   h4{
-    font-family: '20 Kopeek Book',sans-serif;
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
     line-height: 100%;
     color: #181818;
     margin-right: 120px;
+    @include max-screen(770px){
+      font-size: 45px;
+    }
+    @include max-screen(540px){
+      font-size: 35px;
+    }
   }
   a {
-    font-family: '20 Kopeek', sans-serif;
+    @include max-screen(540px){
+      padding: 10px 40px;
+    }
+    @include max-screen(500px){
+      font-size: 14px;
+    }
+    @include max-screen(550px){
+      padding: 10px 60px;
+    }
+
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -233,25 +712,36 @@ header{
     border-radius: 40px;
     border: 1px solid #181818;
     text-align: center;
-    padding: 15px 30px;
+    padding: 15px 40px;
   }
 
   p{
-    font-family: '20 Kopeek',sans-serif;
+    @include max-screen(770px){
+      font-size: 16px;
+    }
+    @include max-screen(540px){
+      font-size: 15px;
+    }
+
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     color: #181818;
     max-width: 233px;
+    padding-bottom: 30px;
   }
 }
 
 .show_more{
+  @include max-screen(400px){
+    display: none;
+  }
   background: #2B59C3;
   border-radius: 40px;
-  padding: 20px 30px;
-  font-family: '20 Kopeek Book',sans-serif;
+  padding: 23px 47px;
+  font-family: '20 Kopeek Book';
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -263,24 +753,24 @@ header{
 }
 .show_more_position{
   text-align: center;
+
 }
 .guide_line{
   padding-bottom: 87px;
   img{
-    margin-bottom: 15px;
+    margin-bottom: 23px;
   }
   h3{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(770px){
+      font-size: 34px;
+    }
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
     line-height: 110%;
     color: #181818;
-    @include max-screen(768px){
-      font-size: 20px;
-      line-height: 90%;
 
-    }
   }
   article {
     background: #2B59C3;
@@ -290,25 +780,35 @@ header{
     margin-bottom: 15px;
 
     h4 {
-      font-family: '20 Kopeek Book', sans-serif;
+      @include max-screen(770px){
+        font-size: 20px;
+      }
+      font-family: '20 Kopeek Book';
       font-style: normal;
       font-weight: 400;
-      font-size: 26px;
+      font-size: 22px;
       line-height: 110%;
       color: $main_color;
+      padding-bottom: 10px;
 
     }
     p{
-      font-family: '20 Kopeek Book',sans-serif;
+      @include max-screen(770px){
+        font-size: 18px;
+      }
+      font-family: '20 Kopeek Book';
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 110%;
       color: $main_color;
     }
   }
   p{
-    font-family: '20 Kopeek',sans-serif;
+    @include max-screen(770px){
+      font-size: 15px;
+    }
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -319,7 +819,10 @@ header{
 .submit_form{
   padding-bottom: 150px;
   h3{
-    font-family: '20 Kopeek Book',sans-serif;
+    @include max-screen(770px){
+      font-size: 32px;
+    }
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
@@ -328,7 +831,8 @@ header{
     padding-bottom: 20px;
   }
   p{
-    font-family: '20 Kopeek Book',sans-serif;
+
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -337,82 +841,302 @@ header{
     padding-bottom: 24px;
   }
   .in_put{
+    &:first-of-type{
+      padding-bottom: 20px;
+    }
     height: 51px;
-    margin-bottom: 20px;
     padding: 23px 29px;
+
   }
   button{
     background: #2B59C3;
     border-radius: 40px;
-    font-family: '20 Kopeek',sans-serif;
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 140%;
     color: $main_color;
-    padding: 15px 47px;
+    padding: 19px 47px;
+  }
+  .accept_confirm{
+    @include max-screen(540px){
+      font-size: 15px;
+    }
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #181818;
+    padding-bottom: 25px;
   }
 }
 
 .guarantee_section{
   background-image: url("../images/guatantee.png");
-  height: 100vh;
+  height: 120vh;
   background-size: cover;
   margin-bottom: 150px;
   @include max-screen(900px){
     display: none;
   }
+  .padding_style{
+    padding-left: 47px;
+  }
   h3{
-    font-family: '20 Kopeek Book',sans-serif;
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 45px;
     line-height: 100%;
     color: $main_color;
-    padding-top: 97px;
-    padding-left: 47px;
-    padding-bottom: 65px;
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
 
   .figures_bottom{
-    font-family: '20 Kopeek Book',sans-serif;
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
     line-height: 100%;
     color: #FFFFFF;
+    margin-right: 8px;
   }
   .text_bottom{
-    font-family: '20 Kopeek',sans-serif;
+    @include max-screen(770px){
+      font-size: 14px;
+    }
+    font-family: '20 Kopeek';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
     color: #FFFFFF;
+    position: relative;
+    bottom: -30px;
+    padding-bottom: 47px;
+  }
+  @include max-screen(1200px){
+    .text_bottom_exception{
+      bottom: 0;
+      position: relative;
+    }
   }
 }
 
-.freelance{
-  padding: 150px 0;
-  .row {
-    .col-lg-2 {
-      background: #2B59C3;
-    }
+.contact_section{
+  padding-bottom: 125px
+}
 
-    &:first-of-type {
+.Contact_us{
+  padding-right: 30px;
+  padding-bottom: 61px;
+  h4{
+    @include max-screen(770px){
+      font-size: 34px;
+    }
+    font-family: '20 Kopeek Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 110%;
+    color: #181818;
+    max-width: 350px;
+    padding-bottom: 30px;
+  }
+  .in_put_bottom{
+    @include max-screen(770px){
+      font-size: 16px;
+    }
+    @include max-screen(560px){
+      height: 60px;
+      width: 290px;
+    }
+    @include max-screen(360px){
+      height: 50px;
+      width: 240px;
+    }
+    height: 71px;
+    width: 445px;
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #868686;
+    padding-left: 28px;
+    border: 1px solid #181818;
+    border-radius: 10px;
+  }
+  .check_in{
+    @include max-screen(770px){
+      font-size: 16px;
+    }
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #181818;
+    padding-bottom: 47px;
+
+  }
+  button{
+    @include max-screen(770px){
+      font-size: 16px;
+    }
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #2B59C3;
+    border-radius: 40px;
+    padding: 15px 27px;
+  }
+}
+
+.Contacts{
+  h4{
+    @include max-screen(580px){
+      font-size: 32px;
+    }
+    font-family: '20 Kopeek Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 110%;
+    color: #181818;
+    padding-bottom: 30px;
+  }
+  p{
+    @include max-screen(580px){
+      font-size: 20px;
+    }
+    font-family: '20 Kopeek Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 110%;
+    color: #181818;
+    padding-bottom: 15px;
+  }
+}
+
+.SMI_section{
+  padding-bottom: 69px;
+  h5{
+    @include max-screen(770px){
+      font-size: 34px;
+    }
+    @include max-screen(360px){
+      font-size: 32px;
+    }
+    font-family: '20 Kopeek Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 110%;
+    color: #181818;
+    padding-bottom: 20px;
+  }
+  p{
+    @include max-screen(990px){
+      padding-bottom: 35px;
+    }
+    @include max-screen(770px){
+      font-size: 15px;
+    }
+    margin-right: 38px;
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #FFFFFF;
+    padding-bottom: 23px;
+
+  }
+  a{
+    @include max-screen(650px){
+      font-size: 12px;
+  }
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-align: end;
+  }
+  .add_smi{
+    background: #2B59C3;
+    border-radius: 10px;
+    padding: 6px 4px 0 15px;
+    margin-bottom: 27px;
+  }
+}
+
+
+
+.frelans{
+  padding: 150px 0;
+  .row{
+    .col-lg-2{
+      background-color: #005cbf;
+    }
+    .col-lg-3{
+      &:nth-child(2){
+        padding-left: 30px;
+        position: relative;
+        &:after{
+          content: "";
+          display: block;
+          width: 30px;
+          height: 5px;
+          background-color: white;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+        }
+      }
+    }
+    .col-lg-3{
+      &:nth-child(3){
+        border: 4px solid #2B59C3;
+        border-bottom: 0.5px solid #868686;
+        border-top: none;
+      }
+    }
+    &:first-of-type{
       .col-lg-3, .col-lg-4{
         border-bottom: none;
       }
-      .col-lg-2 {
+      .col-lg-2{
         border-radius: 10px 10px 0 0;
       }
+      .col-lg-3{
+        &:nth-child(3){
+          border-radius: 10px 10px 0 0;
+          border-top: 4px solid #2B59C3;
+        }
+      }
     }
-    &:last-of-type {
-      .col-lg-2 {
+    &:last-of-type{
+      .col-lg-2{
         border-radius: 0 0 10px 10px;
       }
       .col-lg-3, .col-lg-4{
-        border-bottom:0;
+        border-bottom: none;
+      }
+      .col-lg-3{
+        &:nth-child(3){
+          border-radius: 0 0 10px 10px;
+          border-bottom: 4px solid #2B59C3;
+        }
       }
     }
     .col-lg-3, .col-lg-4{
@@ -420,10 +1144,11 @@ header{
     }
   }
   h4{
-    font-family: '20 Kopeek Book',sans-serif;
+
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
-    font-size: 34px;
+    font-size: 38px;
     line-height: 110%;
     color: #868686;
   }
@@ -433,13 +1158,222 @@ header{
   }
   h5{
     padding-top: 26px;
-    font-family: '20 Kopeek Book',sans-serif;
+    font-family: '20 Kopeek Book';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 26px;
     line-height: 110%;
-    display: flex;
-    align-items: flex-end;
-    color: $main_color;
+    color: #FFFFFF;
   }
 }
+
+
+
+
+
+
+
+footer {
+  padding-top: 33px;
+  h5{
+    @include max-screen(990px){
+      font-size: 16px;
+    }
+    @include max-screen(770px){
+      font-size: 15px;
+    }
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #181818;
+  }
+}
+
+.step_by_step{
+  h5{
+    @include max-screen(770px){
+      font-size: 35px;
+    }
+    font-family: '20 Kopeek Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 100%;
+    color: #181818;
+    padding-bottom: 53px;
+  }
+  .lampa{
+    margin-right: 50px;
+    padding-bottom: 40px;
+    img{
+      padding-bottom: 23px;
+    }
+    h5{
+      @include max-screen(770px){
+        font-size: 20px;
+      }
+      font-family: '20 Kopeek Book';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 110%;
+      color: #181818;
+    }
+  }
+  .first_staff_bottom {
+    margin-right: 50px;
+    @include max-screen(1000px){
+      margin-right: 0;
+    }
+    h5{
+      @include max-screen(770px){
+        font-size: 15px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #181818;
+      padding-bottom: 18px;
+      padding-right: 50px;
+    }
+    p {
+      @include max-screen(770px){
+        font-size: 12px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+      color: #181818;
+      padding-bottom: 26px;
+    }
+  }
+  .first_staff_bottom_exception{
+    margin-right: 0;
+  }
+}
+
+.step_by_step_2 {
+  .konvert {
+    margin-right: 50px;
+    padding-bottom: 40px;
+    img {
+      padding-bottom: 23px;
+    }
+    h5 {
+      @include max-screen(770px){
+        font-size: 20px;
+      }
+      font-family: '20 Kopeek Book';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 110%;
+      color: #181818;
+    }
+  }
+  .sec_staff_bottom {
+    margin-right: 50px;
+    @include max-screen(1000px) {
+      margin-right: 30px;
+    }
+
+    h5 {
+      @include max-screen(770px){
+        font-size: 15px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #181818;
+      padding-bottom: 18px;
+    }
+
+    p {
+      @include max-screen(770px){
+        font-size: 12px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+      color: #181818;
+      padding-bottom: 26px;
+    }
+  }
+  .sec_staff_bottom_exception{
+    margin-right: 0;
+  }
+}
+
+.step_by_step_3 {
+  padding-bottom: 150px;
+  .book {
+    margin-right: 50px;
+    padding-bottom: 40px;
+    img {
+      padding-bottom: 23px;
+    }
+    h5 {
+      @include max-screen(770px){
+        font-size: 20px;
+      }
+      font-family: '20 Kopeek Book';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 110%;
+      color: #181818;
+    }
+  }
+  .third_staff_bottom{
+    margin-right: 50px;
+    @include max-screen(1000px) {
+      margin-right: 30px;
+    }
+
+    h5 {
+      @include max-screen(770px){
+        font-size: 15px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #181818;
+      padding-bottom: 18px;
+    }
+
+    p {
+      @include max-screen(770px){
+        font-size: 12px;
+      }
+      font-family: '20 Kopeek';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 19px;
+      color: #181818;
+      padding-bottom: 26px;
+    }
+  }
+  .third_staff_bottom_exception{
+    margin-right: 0;
+  }
+}
+
+
+
+
+
+
+
